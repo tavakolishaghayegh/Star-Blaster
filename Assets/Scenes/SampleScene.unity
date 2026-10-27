@@ -119,24 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &207551978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4772509570625523850, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
-  m_PrefabInstance: {fileID: 2564022358896953263}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &207551979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207551978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cda02e44403a346408e7aefab5b3f7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  MoveSpeed: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,11 +266,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2751729058040720041, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2751729058040720041, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 2751729058040720041, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -329,10 +311,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4772509570625523850, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 207551979}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
 --- !u!1001 &5048440110274178092
 PrefabInstance:
@@ -344,11 +323,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2372067617791673939, guid: 0553ad39525de42f7999a185b3280747, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.22
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2372067617791673939, guid: 0553ad39525de42f7999a185b3280747, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 2372067617791673939, guid: 0553ad39525de42f7999a185b3280747, type: 3}
       propertyPath: m_LocalPosition.z
