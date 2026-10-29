@@ -47,11 +47,11 @@ public class PlayerController : MonoBehaviour
         Vector3 newPos = transform.position + moveVector * MoveSpeed * Time.deltaTime;
         newPos.x = Mathf.Clamp(newPos.x, minBounds.x + leftBoundPadding, maxBounds.x - rightBoundPadding);
         newPos.y = Mathf.Clamp(newPos.y, minBounds.y + downBoundPadding, maxBounds.y - upBoundPadding); 
-        Debug.Log($"Y range: {minBounds.y + downBoundPadding} to {maxBounds.y - upBoundPadding}");
+       
         transform.position = newPos;
        
 
-         Debug.Log($"Real Y: {transform.position.y}");
+         
 
         
         
