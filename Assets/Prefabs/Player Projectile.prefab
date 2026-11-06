@@ -203,4 +203,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127cda581e1f74d2b83c69c07854376e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealar
-  damage: 100
+  damage: 25
