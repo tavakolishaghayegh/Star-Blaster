@@ -222,3 +222,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 50
   hitParticles: {fileID: 7341413599327765284, guid: c5d5524b01ce24f74a5711b798ad9e64, type: 3}
+  applyCameraShake: 1

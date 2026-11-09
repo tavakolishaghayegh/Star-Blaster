@@ -4,6 +4,16 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int health=50;
     [SerializeField] ParticleSystem hitParticles;
+    [SerializeField] bool applyCameraShake;
+    CameraShake cameraShake;
+   
+
+        
+    
+     void Start() {
+        cameraShake=Camera.main.GetComponent<CameraShake>();
+        
+    }
 
      void OnTriggerEnter2D(Collider2D other) 
      {
@@ -33,6 +43,10 @@ public class Health : MonoBehaviour
         {
            ParticleSystem particles= Instantiate(hitParticles,transform.position,Quaternion.identity);
            Destroy(particles,particles.main.duration+particles.main.startLifetime.constantMax);
+        }
+        if (applyCameraShake)
+        {
+            cameraShake.play();
         }
         
         
