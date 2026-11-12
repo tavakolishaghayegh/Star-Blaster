@@ -6,12 +6,14 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitParticles;
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
+    AudioManager audioManager;
    
 
         
     
      void Start() {
         cameraShake=Camera.main.GetComponent<CameraShake>();
+        audioManager=FindAnyObjectByType<AudioManager>();
         
     }
 
@@ -23,6 +25,8 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealar.GetDamage());
             PlayHitParticles();
             damageDealar.Hit();
+            audioManager.playdamageSFX();
+            
             
         }
 
