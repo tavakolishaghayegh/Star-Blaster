@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e6a29575b004b50a8c75236b92d258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  shootingClip: {fileID: 8300000, guid: 8e215921011e74ce382eab29a764706d, type: 3}
+  shootingClip: {fileID: 8300000, guid: 5c3427d43a7d84edfa0922ea697f5602, type: 3}
   shootingVolume: 0.1
   damageClip: {fileID: 8300000, guid: 06e649cb5b3f24d74b7d992cc2270658, type: 3}
   damageVolume: 0.2

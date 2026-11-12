@@ -69,7 +69,12 @@ public class Shooter : MonoBehaviour
            Destroy(projectile,projectileLifetime);
            float waitTime=Random.Range(basefireRate - fireRateVariance,basefireRate+fireRateVariance);
            waitTime=Mathf.Clamp(waitTime,minimumFireRate, float.MaxValue);
-           audioManager.PlayShootingSFX();
+            if (!useAi)
+            {
+                 audioManager.PlayShootingSFX();
+                
+            }
+         
            yield return new WaitForSeconds(waitTime);
             
         }

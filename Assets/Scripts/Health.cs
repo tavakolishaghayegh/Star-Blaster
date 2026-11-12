@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
     [SerializeField] int health=50;
     [SerializeField] ParticleSystem hitParticles;
     [SerializeField] bool applyCameraShake;
+    [SerializeField] bool playDamageSFX;
     CameraShake cameraShake;
     AudioManager audioManager;
    
@@ -25,7 +26,11 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealar.GetDamage());
             PlayHitParticles();
             damageDealar.Hit();
-            audioManager.playdamageSFX();
+            if (playDamageSFX)
+            {
+              audioManager.playdamageSFX();
+            }
+           
             
             
         }
