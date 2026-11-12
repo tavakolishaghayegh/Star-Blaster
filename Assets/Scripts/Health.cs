@@ -32,6 +32,7 @@ public class Health : MonoBehaviour
 
         
     }
+    
     void TakeDamage(int damage)
     {
         health -= damage;
