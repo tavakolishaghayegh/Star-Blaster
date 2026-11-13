@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 10259771}
   - component: {fileID: 10259772}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 215925829}
   - component: {fileID: 215925828}
   - component: {fileID: 215925827}
+  - component: {fileID: 215925831}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -348,6 +349,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &215925831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215925826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60495c6b954e04ac4976b309c31594f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIUpdater
+  healthSlider: {fileID: 10259772}
+  playerHealth: {fileID: 253070805}
+  ScoreText: {fileID: 1950007470}
 --- !u!1 &253070798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4772509570625523850, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
@@ -373,6 +389,17 @@ MonoBehaviour:
   minimumFireRate: 0.2
   fireRateVariance: 0
   isFiring: 0
+--- !u!114 &253070805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1753457222580080541, guid: bf192f2fb601c4b92bd47e473b655e05, type: 3}
+  m_PrefabInstance: {fileID: 2564022358896953263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253070798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14be69118f7524f8c9b9b51078661150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
 --- !u!1 &268274231
 GameObject:
   m_ObjectHideFlags: 0
