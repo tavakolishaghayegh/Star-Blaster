@@ -32,9 +32,10 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealar.GetDamage());
             PlayHitParticles();
             damageDealar.Hit();
-            if (playDamageSFX)
+            audioManager.playdamageSFX();
+            if (applyCameraShake)
             {
-              audioManager.playdamageSFX();
+              cameraShake.play();
             }
            
             
@@ -76,10 +77,7 @@ public class Health : MonoBehaviour
            ParticleSystem particles= Instantiate(hitParticles,transform.position,Quaternion.identity);
            Destroy(particles,particles.main.duration+particles.main.startLifetime.constantMax);
         }
-        if (applyCameraShake)
-        {
-            cameraShake.play();
-        }
+        
         
         
     }
