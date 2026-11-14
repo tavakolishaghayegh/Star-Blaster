@@ -20,8 +20,8 @@ public class AudioManager : MonoBehaviour
 
     void ManageSingleton()
     {
-        int instanceCount=FindObjectsByType<AudioManager>().Length;
-        //if(instanceCount > 1)
+       
+        
         if(instance !=null)
         {
             gameObject.SetActive(false);

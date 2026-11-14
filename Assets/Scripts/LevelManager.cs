@@ -1,17 +1,26 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 { 
+    [SerializeField]float sceneLoadDelay=2f;
+    ScoreKeeper scoreKeeper;
+     void Awake()
+     {
+        scoreKeeper=FindAnyObjectByType<ScoreKeeper>();
+        
+     }
     public void LoadGame()
     {
         SceneManager.LoadScene("GameScene");
+        scoreKeeper.ResetScore();
     }
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad("GameOver",2f));
+        StartCoroutine(WaitAndLoad("GameOver",sceneLoadDelay));
     }
     public void LoadMainMenu()
     {
