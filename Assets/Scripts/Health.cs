@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     CameraShake cameraShake;
     AudioManager audioManager;
     ScoreKeeper scoreKeeper;
+    LevelManager levelManager;
    
 
         
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour
         cameraShake=Camera.main.GetComponent<CameraShake>();
         audioManager=FindAnyObjectByType<AudioManager>();
         scoreKeeper=FindAnyObjectByType<ScoreKeeper>();
+        levelManager=FindAnyObjectByType<LevelManager>();
         
     }
 
@@ -54,11 +56,17 @@ public class Health : MonoBehaviour
     }
     void Die()
     {
-        if (!isPlayer)
-            {
-                scoreKeeper.ModifyScore(scoreValue);
-            }
-            Destroy(gameObject);
+        if (isPlayer)
+         {
+             
+            levelManager.LoadGameOver();
+         }
+     else
+         {
+             scoreKeeper.ModifyScore(scoreValue);
+        }
+
+    Destroy(gameObject);
         
     }
     void PlayHitParticles()
